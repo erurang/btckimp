@@ -1,15 +1,11 @@
 import React, { useState } from 'react';
-
 import styles from "./TableItem.module.css"
-
+import UpbitList from "../../service/UpbitKoreaList"
 
 const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
 
-
     const [upbitPrice, setUpbitPrice] = useState(0)
-
     const [binancePrice, setBinancePrice] = useState(0)
-
     const [kimp, setKimp] = useState(0)
 
     setInterval(() => {
@@ -30,14 +26,15 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
 
     return (
         <tr>
-            <td>{upbit}</td>
-            <td>
-                <div id="price">
-                    {upbitPrice}
-                </div>
+            <td className={styles.td, styles.upbitName}>
+                <p>{UpbitList[upbit]}</p>
+                {upbit}
+            </td>
+            <td className={styles.upbitPrice}>
+                {upbitPrice}
             </td>
             <td>{binancePrice}</td>
-            <td>{kimp}</td>
+            {parseFloat(kimp) > 0 ? <td className={styles.up}>+{kimp}</td> : <td className={styles.down}>{kimp}</td>}
         </tr>
     );
 }

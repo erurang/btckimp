@@ -1,0 +1,17 @@
+td {
+  width: 200px;
+  padding: 10px;
+  text-align: end;
+}
+
+.up {
+  color: #26a96a;
+}
+
+.down {
+  color: #ef5350;
+}
+
+.upbitName {
+  text-align: start;
+}

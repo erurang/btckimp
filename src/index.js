@@ -1,14 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// coinList
 import CoinList from "./service/CoinList";
 import upbitCoinPrice from "./service/upbit/Price";
 import BinanceCoinPrice from "./service/binance/Price";
-
 import "./service/binance/Price";
+
+// css
+import "./index.css";
+import "./reset.css";
 
 ReactDOM.render(
   <React.StrictMode>
