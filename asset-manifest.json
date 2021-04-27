@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/btckimp/static/css/main.a90b6518.chunk.css",
-    "main.js": "/btckimp/static/js/main.233a742d.chunk.js",
-    "main.js.map": "/btckimp/static/js/main.233a742d.chunk.js.map",
+    "main.css": "/btckimp/static/css/main.ad79af0a.chunk.css",
+    "main.js": "/btckimp/static/js/main.f3c37edb.chunk.js",
+    "main.js.map": "/btckimp/static/js/main.f3c37edb.chunk.js.map",
     "runtime-main.js": "/btckimp/static/js/runtime-main.7e4d6cbb.js",
     "runtime-main.js.map": "/btckimp/static/js/runtime-main.7e4d6cbb.js.map",
-    "static/js/2.4bf21b69.chunk.js": "/btckimp/static/js/2.4bf21b69.chunk.js",
-    "static/js/2.4bf21b69.chunk.js.map": "/btckimp/static/js/2.4bf21b69.chunk.js.map",
+    "static/js/2.ceafad31.chunk.js": "/btckimp/static/js/2.ceafad31.chunk.js",
+    "static/js/2.ceafad31.chunk.js.map": "/btckimp/static/js/2.ceafad31.chunk.js.map",
     "static/js/3.687db341.chunk.js": "/btckimp/static/js/3.687db341.chunk.js",
     "static/js/3.687db341.chunk.js.map": "/btckimp/static/js/3.687db341.chunk.js.map",
     "index.html": "/btckimp/index.html",
-    "static/css/main.a90b6518.chunk.css.map": "/btckimp/static/css/main.a90b6518.chunk.css.map",
-    "static/js/2.4bf21b69.chunk.js.LICENSE.txt": "/btckimp/static/js/2.4bf21b69.chunk.js.LICENSE.txt"
+    "static/css/main.ad79af0a.chunk.css.map": "/btckimp/static/css/main.ad79af0a.chunk.css.map",
+    "static/js/2.ceafad31.chunk.js.LICENSE.txt": "/btckimp/static/js/2.ceafad31.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e4d6cbb.js",
-    "static/js/2.4bf21b69.chunk.js",
-    "static/css/main.a90b6518.chunk.css",
-    "static/js/main.233a742d.chunk.js"
+    "static/js/2.ceafad31.chunk.js",
+    "static/css/main.ad79af0a.chunk.css",
+    "static/js/main.f3c37edb.chunk.js"
   ]
 }
