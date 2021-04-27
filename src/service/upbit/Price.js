@@ -123,22 +123,12 @@ ws.onmessage = (e) => {
   const a = new TextDecoder("utf-8");
   const b = new Uint8Array(e.data);
   const c = JSON.parse(a.decode(b));
+  // 현재가 등락률 52고 52저
 
-  upbitCoinPrice[c.cd] = c.tp;
-  upbitPriceRate[c.cd] = c.scr;
+  // console.log(c);
+  upbitCoinPrice[c.cd] = [c.tp, c.scr, c.h52wp, c.l52wp];
 };
 
 ws.onerror = (e) => console.log(e);
-
-// const binance = new Binance().options({
-//   APIKEY: "0H4FwaTTlzyiqRU5lDr02HYIU2y88QP4AjQ9IwPgXvn3WpMjlkchfAXFHwrgRzwH",
-//   APISECRET: "piWVNqOBfEIZbSvLFkuCNrIVSW7hybZqLVHL3VbAV2Jgzux3zH5JS18gIXuetwfc",
-//   userServerTime: true,
-//   test: true,
-// });
-
-// binance.prices("BTC", (error, ticker) => {
-//   console.log("price of btc:", ticker);
-// });
 
 export default upbitCoinPrice;

@@ -12,6 +12,9 @@ const Table = ({ CoinList, upbitCoinPrice, BinanceCoinPrice }) => {
                     <th>현재가(Upbit)</th>
                     <th>현재가(Binance)</th>
                     <th>김프</th>
+                    <th>등락률(Upbit)</th>
+                    <th className={styles.remove}>52주고</th>
+                    <th className={styles.remove}>52주저</th>
                 </tr>
             </thead>
             <tbody>

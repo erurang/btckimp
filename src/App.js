@@ -40,16 +40,16 @@ function App({ CoinList, upbitCoinPrice, BinanceCoinPrice }) {
         <Header title="김프" />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
-          <Grid container spacing={4}>
+          <Grid container spacing={1} style={{ paddingBottom: "24px" }}>
             <Table
               CoinList={CoinList}
               upbitCoinPrice={upbitCoinPrice}
               BinanceCoinPrice={BinanceCoinPrice}
             />
           </Grid>
-          <Grid container spacing={5} className={classes.mainGrid}>
+          {/* <Grid container spacing={5} className={classes.mainGrid}>
             <Sidebar title={sidebar.title} description={sidebar.description} />
-          </Grid>
+          </Grid> */}
         </main>
       </Container>
       <Footer

@@ -1,6 +1,6 @@
 td {
   width: 200px;
-  padding: 10px;
+  padding: 20px;
   text-align: end;
 }
 
@@ -14,4 +14,17 @@ td {
 
 .upbitName {
   text-align: start;
+}
+
+@media (max-width: 700px) {
+  .remove {
+    display: none;
+  }
+  .up {
+    color: #26a96a;
+  }
+
+  .down {
+    color: #ef5350;
+  }
 }
