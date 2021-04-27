@@ -54,7 +54,7 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
             <td className={styles.td, styles.upbitName}>
                 <div style={{ display: "flex" }}>
                     <div style={{ marginTop: "5px" }}>
-                        <img src={imgSrc} alt="BCH" title="BCH" width="20px" height="20px"></img>
+                        <img className="coinImg" src={imgSrc} alt="BCH" title="BCH" width="20px" height="20px"></img>
                     </div>
                     <div style={{ marginLeft: "10px" }}>
                         <p>{UpbitList[upbit]}</p>
