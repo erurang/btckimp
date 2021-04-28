@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import TableItem from '../TableItem/TableItem';
 import styles from "./Table.module.css"
 
@@ -6,15 +6,29 @@ const Table = ({ CoinList, upbitCoinPrice, BinanceCoinPrice }) => {
 
     return (
         <table>
-            <thead>
+            <thead className={styles.thead}>
                 <tr>
-                    <th>이름</th>
-                    <th>현재가(Upbit)</th>
-                    <th>현재가(Binance)</th>
-                    <th>김프</th>
-                    <th>등락률(Upbit)</th>
-                    <th className={styles.remove}>52주고</th>
-                    <th className={styles.remove}>52주저</th>
+                    <th>
+                        이름
+                    </th>
+                    <th>
+                        현재가(Upbit)
+                    </th>
+                    <th>
+                        현재가(Binance)
+                    </th>
+                    <th>
+                        김프
+                    </th>
+                    <th>
+                        전일대비(Upbit)
+                    </th>
+                    <th className={styles.remove}>
+                        고가대비(52주)
+                    </th>
+                    <th className={styles.remove}>
+                        저가대비(52주)
+                    </th>
                 </tr>
             </thead>
             <tbody>

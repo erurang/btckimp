@@ -42,7 +42,7 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
         }
 
 
-    }, 1500)
+    }, 500)
 
 
     const imgName = upbit.split("-")[1]
@@ -62,14 +62,12 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
                     </div>
                 </div>
             </td>
-            <td className={styles.upbitPrice}>
+            <td >
                 {upbitPrice}
             </td>
-            <td>{binancePrice}</td>
+            <td >{binancePrice}</td>
             {parseFloat(kimp) > 0 ? <td className={styles.up}>+{kimp}</td> : <td className={styles.down}>{kimp}</td>}
             {scr > 0 ? <td className={styles.up}> +{scr}% </td> : <td className={styles.down}> {scr}%</td>}
-
-
             {(((upbitPrice / h52wp) - 1) * 100).toFixed(2) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>{h52wp.toFixed(8)}</p> </td> : <td className={styles.remove}> <span className={styles.down}> {(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>{h52wp.toFixed(8)}</p> </td>}
             {(((upbitPrice / l52wp) - 1) * 100).toFixed(2) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>{l52wp.toFixed(8)}</p> </td> : <td className={styles.remove}>  <span className={styles.down}> {(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>{l52wp.toFixed(8)}</p> </td>}
 

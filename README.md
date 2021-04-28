@@ -5,6 +5,7 @@
 - [x] Table 생성
 - [ ] Table sorting
 - [ ] UI
+- [x] 반응형
 - [ ] Trading View
 - [ ] Component 최적화
 

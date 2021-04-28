@@ -5,18 +5,18 @@ import Table from "./components/Table/Table";
 import "./App.css";
 
 // material
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import MainFeaturedPost from "./components/MainFeaturedPost/MainFeaturedPost";
-import Sidebar from "./components/Sidebar/Sidebar";
+// import Sidebar from "./components/Sidebar/Sidebar";
 
-const useStyles = makeStyles((theme) => ({
-  mainGrid: {
-    marginTop: theme.spacing(3),
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   mainGrid: {
+//     marginTop: theme.spacing(3),
+//   },
+// }));
 
 const mainFeaturedPost = {
   title: "트레이딩뷰자리",
@@ -25,19 +25,17 @@ const mainFeaturedPost = {
   imgText: "트레이딩뷰자리",
 };
 
-const sidebar = {
-  title: "채팅만들어",
-  description: "채팅자리임ㅇㅇ",
-};
+// const sidebar = {
+//   title: "채팅만들어",
+//   description: "채팅자리임ㅇㅇ",
+// };
 
 function App({ CoinList, upbitCoinPrice, BinanceCoinPrice }) {
-  const classes = useStyles();
-
   return (
     <div className="App">
       <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="김프" />
+      <Header title="김프" />
+      <Container maxWidth="lg" style={{ paddingTop: "100px" }}>
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={1} style={{ paddingBottom: "24px" }}>
