@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import styles from "./TableItem.module.css"
 
+let exChange = 0
+
+fetch("https://earthquake.kr:23490/query/USDKRW")
+    .then((res) => res.json())
+    .then((res) =>
+        exChange = res["USDKRW"][0].toFixed(0)
+    );
 
 const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice, UpbitList }) => {
     // console.log(upbitCoinPrice, '변하나체크');
     // 왜 이더리움만 못받아오지
-    // if (upbit.includes('ETH')) console.log(upbitCoinPrice[upbit]);
+    // if (upbit.includes('BTC')) console.log(BinanceCoinPrice[binance], binance);
+    // console.log(BinanceCoinPrice)
 
     const [upbitPrice, setUpbitPrice] = useState(0)
     const [binancePrice, setBinancePrice] = useState(0)
@@ -14,23 +22,22 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice, UpbitList
     const [h52wp, setH52] = useState(0)
     const [l52wp, setL52] = useState(0)
 
-
     setInterval(() => {
 
         if (upbitCoinPrice[upbit] !== undefined && upbitPrice !== upbitCoinPrice[upbit][0]) {
-            setUpbitPrice(upbitCoinPrice[upbit][0].toFixed(8))
+            setUpbitPrice(upbitCoinPrice[upbit][0])
         }
 
         if (BinanceCoinPrice[binance] !== undefined && binancePrice !== BinanceCoinPrice[binance]) {
-            setBinancePrice(BinanceCoinPrice[binance])
+            setBinancePrice(parseInt(((BinanceCoinPrice[binance] * exChange).toFixed(0))))
         }
 
         if (upbitCoinPrice[upbit] !== undefined && upbitPrice !== upbitCoinPrice[upbit][0] && BinanceCoinPrice[binance] !== undefined && binancePrice !== BinanceCoinPrice[binance]) {
-            setKimp(`${(((upbitCoinPrice[upbit][0] / BinanceCoinPrice[binance]) * 100) - 100).toFixed(2)}%`)
+            setKimp(`${((((upbitCoinPrice[upbit][0] / (BinanceCoinPrice[binance] * exChange).toFixed(0)) * 100) - 100)).toFixed(2)}%`)
         }
 
         if (upbitCoinPrice[upbit] !== undefined && scr !== upbitCoinPrice[upbit][1]) {
-            setScr(((upbitCoinPrice[upbit][1] * 100)).toFixed(2))
+            setScr(((upbitCoinPrice[upbit][1] * 100).toFixed(2)))
         }
 
         if (upbitCoinPrice[upbit] !== undefined && h52wp !== upbitCoinPrice[upbit][2]) {
@@ -61,14 +68,17 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice, UpbitList
                     </div>
                 </div>
             </td>
-            <td >
-                {upbitPrice}
+            <td className={styles.tp}>
+                {upbitPrice.toLocaleString()}
             </td>
-            <td >{binancePrice}</td>
+            <td className={styles.tp}>
+                {binancePrice.toLocaleString()}
+                <p className={styles.dollor}>${BinanceCoinPrice[binance]}</p>
+            </td>
             {parseFloat(kimp) > 0 ? <td className={styles.up}>+{kimp}</td> : <td className={styles.down}>{kimp}</td>}
             {scr > 0 ? <td className={styles.up}> +{scr}% </td> : <td className={styles.down}> {scr}%</td>}
-            {(((upbitPrice / h52wp) - 1) * 100).toFixed(2) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>{h52wp.toFixed(8)}</p> </td> : <td className={styles.remove}> <span className={styles.down}> {(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>{h52wp.toFixed(8)}</p> </td>}
-            {(((upbitPrice / l52wp) - 1) * 100).toFixed(2) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>{l52wp.toFixed(8)}</p> </td> : <td className={styles.remove}>  <span className={styles.down}> {(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>{l52wp.toFixed(8)}</p> </td>}
+            {(((upbitPrice / h52wp) - 1) * 100) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>+{h52wp.toLocaleString()}</p> </td> : <td className={styles.remove}> <span className={styles.down}> {(((upbitPrice / h52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>-{h52wp.toLocaleString()}</p> </td>}
+            {(((upbitPrice / l52wp) - 1) * 100) > 0 ? <td className={styles.remove}> <span className={styles.up}>+{(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span><p className={styles.up}>+{l52wp.toLocaleString()}</p> </td> : <td className={styles.remove}>  <span className={styles.down}> {(((upbitPrice / l52wp) - 1) * 100).toFixed(2)}%</span> <p className={styles.down}>-{l52wp.toLocaleString()}</p> </td>}
         </tr>
     );
 }

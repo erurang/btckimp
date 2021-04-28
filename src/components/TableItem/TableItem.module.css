@@ -6,17 +6,61 @@ td {
 
 .up {
   color: #26a96a;
+  padding-right: 60px;
 }
 
 .down {
   color: #ef5350;
+  padding-right: 60px;
 }
 
 .upbitName {
   text-align: start;
 }
 
-@media (max-width: 700px) {
+.dollor {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.tp {
+  text-align: end;
+  padding-right: 60px;
+}
+
+@media (min-width: 300px) and (max-width: 520px) {
+  * {
+    font-size: 12px;
+  }
+
+  .engName {
+    font-size: 10px;
+    opacity: 0.5;
+  }
+  .dollor {
+    font-size: 10px;
+  }
+
+  .remove {
+    display: none;
+  }
+  td {
+    width: 100px;
+  }
+  .up {
+    color: #26a96a;
+    padding-right: 0px;
+  }
+  .down {
+    color: #ef5350;
+    padding-right: 0px;
+  }
+  .tp {
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 520px) and (max-width: 880px) {
   * {
     font-size: 12px;
   }
@@ -25,18 +69,29 @@ td {
   }
   .up {
     color: #26a96a;
+    padding-right: 30px;
   }
 
   .down {
     color: #ef5350;
+    padding-right: 30px;
   }
   .tr > td {
     padding-bottom: 10px;
   }
+
+  .tp {
+    text-align: end;
+    padding-right: 30px;
+  }
+  .engName {
+    font-size: 10px;
+    opacity: 0.5;
+  }
 }
 
 .engName {
-  font-size: 10px;
+  font-size: 13px;
   opacity: 0.5;
 }
 

@@ -1,8 +1,14 @@
-@media (max-width: 700px) {
+@media (max-width: 880px) {
   .remove {
     display: none;
   }
 }
+
+/* @media (max-width: 550px) {
+  .tr > th {
+    width: 50px;
+  }
+} */
 
 .tr {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
