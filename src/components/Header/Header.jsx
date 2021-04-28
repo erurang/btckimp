@@ -28,8 +28,10 @@ const Header = (props) => {
     return (
         <>
             <Toolbar className={classes.toolbar} style={{ backgroundColor: "#000000", opacity: "0.9", position: "fixed", height: "80px", width: "100%", zIndex: "1" }}>
-                {/*  */}
-                <Typography
+                <span>KIMP.BTC</span>
+
+
+                {/* <Typography
                     component="h2"
                     variant="h5"
                     color="inherit"
@@ -37,8 +39,8 @@ const Header = (props) => {
                     noWrap
                     className={classes.toolbarTitle}
                 >
-                    KIMP.BTC
-                </Typography>
+
+                </Typography> */}
                 {/* <Button variant="outlined" size="small">
                     네이버로 로그인
                 </Button> */}

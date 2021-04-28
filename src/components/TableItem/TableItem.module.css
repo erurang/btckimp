@@ -1,5 +1,5 @@
 td {
-  width: 200px;
+  width: 180px;
   padding: 20px;
   text-align: end;
 }
@@ -30,4 +30,20 @@ td {
   .down {
     color: #ef5350;
   }
+  .tr > td {
+    padding-bottom: 10px;
+  }
+}
+
+.engName {
+  font-size: 10px;
+  opacity: 0.5;
+}
+
+.tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.tr > td {
+  padding-top: 15px;
 }

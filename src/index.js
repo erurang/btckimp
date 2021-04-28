@@ -8,18 +8,20 @@ import CoinList from "./service/CoinList";
 import upbitCoinPrice from "./service/upbit/Price";
 import BinanceCoinPrice from "./service/binance/Price";
 import "./service/binance/Price";
+import UpbitList from "./service/UpbitKoreaList";
 
 // css
 import "./index.css";
 import "./reset.css";
 
-console.log("index");
+// console.log("index");
 ReactDOM.render(
   <React.StrictMode>
     <App
       CoinList={CoinList}
       upbitCoinPrice={upbitCoinPrice}
       BinanceCoinPrice={BinanceCoinPrice}
+      UpbitList={UpbitList}
     />
   </React.StrictMode>,
   document.getElementById("root")

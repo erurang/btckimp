@@ -8,8 +8,8 @@ function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+            <Link color="gray" href="https://github.com/erurang">
+                https://github.com/erurang
       </Link>{' '}
             {new Date().getFullYear()}
             {'.'}
@@ -19,7 +19,7 @@ function Copyright() {
 
 const useStyles = makeStyles((theme) => ({
     footer: {
-        backgroundColor: theme.palette.background.paper,
+        backgroundColor: "#131313",
         // marginTop: theme.spacing(8),
         padding: theme.spacing(6, 0),
     },
