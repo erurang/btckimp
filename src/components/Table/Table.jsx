@@ -3,6 +3,7 @@ import TableItem from '../TableItem/TableItem';
 import styles from "./Table.module.css"
 
 const Table = ({ CoinList, upbitCoinPrice, BinanceCoinPrice }) => {
+    console.log('table');
 
     return (
         <table>

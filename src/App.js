@@ -1,22 +1,13 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import TradingView from "./components/TradingView/tradingView";
+// import TradingView from "./components/TradingView/tradingView";
 import Table from "./components/Table/Table";
 import "./App.css";
 
-// material
-// import { makeStyles } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import MainFeaturedPost from "./components/MainFeaturedPost/MainFeaturedPost";
-// import Sidebar from "./components/Sidebar/Sidebar";
-
-// const useStyles = makeStyles((theme) => ({
-//   mainGrid: {
-//     marginTop: theme.spacing(3),
-//   },
-// }));
 
 const mainFeaturedPost = {
   title: "트레이딩뷰자리",
@@ -25,12 +16,8 @@ const mainFeaturedPost = {
   imgText: "트레이딩뷰자리",
 };
 
-// const sidebar = {
-//   title: "채팅만들어",
-//   description: "채팅자리임ㅇㅇ",
-// };
-
 function App({ CoinList, upbitCoinPrice, BinanceCoinPrice }) {
+  console.log("앱 갱신됨");
   return (
     <div className="App">
       <CssBaseline />
@@ -45,9 +32,6 @@ function App({ CoinList, upbitCoinPrice, BinanceCoinPrice }) {
               BinanceCoinPrice={BinanceCoinPrice}
             />
           </Grid>
-          {/* <Grid container spacing={5} className={classes.mainGrid}>
-            <Sidebar title={sidebar.title} description={sidebar.description} />
-          </Grid> */}
         </main>
       </Container>
       <Footer

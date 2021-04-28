@@ -13,6 +13,7 @@ import "./service/binance/Price";
 import "./index.css";
 import "./reset.css";
 
+console.log("index");
 ReactDOM.render(
   <React.StrictMode>
     <App

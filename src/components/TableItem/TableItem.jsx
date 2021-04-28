@@ -3,6 +3,7 @@ import styles from "./TableItem.module.css"
 import UpbitList from "../../service/UpbitKoreaList"
 
 const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
+    // console.log(upbitCoinPrice, '변하나체크');
     // 왜 이더리움만 못받아오지
     // if (upbit.includes('ETH')) console.log(upbitCoinPrice[upbit]);
 
@@ -12,7 +13,6 @@ const TableItem = ({ upbit, binance, upbitCoinPrice, BinanceCoinPrice }) => {
     const [scr, setScr] = useState(0)
     const [h52wp, setH52] = useState(0)
     const [l52wp, setL52] = useState(0)
-
 
 
     setInterval(() => {
