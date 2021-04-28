@@ -6,7 +6,7 @@
 - [ ] Table sorting
 - [ ] UI
 - [x] 반응형
-- [ ] Trading View
+- [x] Trading View => 안해도될듯
 - [ ] Component 최적화
 
 현재까지 계획은 위와 같습니다.
@@ -51,14 +51,10 @@ components
 6. TableItem에서 가격들을 state로 관리함. 처음 초기값을 지정후 price 종목명 과 비교해 현재값과 다를때 상태를 변경함.
 7. setInterval로 변하는 Price값과 계속 비교하여 상태를 변경함.
 
-이 상태인데.. 너무 하단 컴포넌트에서 많은것을 담당하고있는것같다.
+====>>>>>>> 테이블을 정렬시키기 위해선 테이블의 state를 관리할 전역변수가 필요함..
 
-지금 내가 하려는것은 하위컴포넌트는 단순히 View만 담당하도록 데이터처리 로직을 상위컴포넌트로 옮기려 하는 것이다.
+아무리 찾아봐도 테이블 데이터를 정렬하려면 Table컴포넌트에서 이미 만들어진(정적인) data들을 받아서 처리하는수밖에 없더라
 
-즉 Table.js에서 CoinList / upbitCoinPrice / BinanceCoinPirce를 통하여 리스트를 만든다.
-=> 애초에 Table에서 price를 Import해서 사용하면 될것같다. 굳이 props를 통해 전달전달할 필요는 없어보임
+그래서 또 열심히 찾아보니까 이럴때는 전역변수로 데이터를 관리해야한다고한다.. 그것이 contextApi와 redux..
 
-이 리스트는 websocket으로 오는 정보들로 매번 만든다. 
-
-TableItem에는 Table에서 만든 데이터들만 표시를 해준다. item에서는 state값만 두어서 전의 상태와 다른지만 체크하고 다르다면 업데이트시킨다.
-
+공부후에 정렬기능을 업데이트해야할거같다.
